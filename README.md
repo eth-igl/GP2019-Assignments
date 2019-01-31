@@ -34,7 +34,7 @@ On Windows you can download it from:
 [https://cmake.org/download/](https://cmake.org/download/)
 
 ### Cloning the Assignment Repository
-Before you are able to clone your private assignment repository, you need to have a active [Github](https://github.com/) account. Then you can create your own private online repository by following this link: https://classroom.github.com/assignment-invitations/230fae0409c8c597b4e843fbe1819095
+Before you are able to clone your private assignment repository, you need to have a active [Github](https://github.com/) account. Then you can create your own private online repository by following this link: https://classroom.github.com/a/8vO7LxYa
 
 In the next step you need to clone it to your local harddrive
 ```
