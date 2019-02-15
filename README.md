@@ -9,7 +9,7 @@ Follow the [instructions](#workflow) to updated your private repository.
 
 ## Assignments Overview
 
-[Assignment 1](assignment1/README.md) (Due date: XX.XX.2019 08:00)  
+[Assignment 1](assignment1) (Due date: 15.03.2019 08:00)  
 
 ## General Rules and Instructions
 
