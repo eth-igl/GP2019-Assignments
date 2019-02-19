@@ -12,4 +12,4 @@ find_package(LIBIGL REQUIRED QUIET)
 # Add your project files
 FILE(GLOB SRCFILES src/*.cpp)
 add_executable(${PROJECT_NAME} ${SRCFILES})
-target_link_libraries(${PROJECT_NAME}_bin igl::core igl::opengl_glfw)
+target_link_libraries(${PROJECT_NAME} igl::core igl::opengl_glfw)
