@@ -53,7 +53,6 @@ Eigen::Vector4f rotation(0,0,0,1.);
 typedef Eigen::Triplet<double> T;
 //per vertex color array, #V x3
 Eigen::MatrixXd vertex_colors;
-int max_iter = 5;
 
 //function declarations (see below for implementation)
 bool solve(Viewer& viewer);
@@ -159,8 +158,6 @@ int main(int argc, char *argv[])
           {
             handle_id.setConstant(V.rows(),1,-1);
           }
-
-          ImGui::InputInt("max_iter", &max_iter, 0, 0);
     }
   };
 
