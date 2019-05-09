@@ -85,12 +85,15 @@ void get_new_handle_locations()
     if (handle_id[vi] >= 0)
     {
       Eigen::RowVector3f goalPosition = V.row(vi).cast<float>();
+
       if (handle_id[vi] == moving_handle) {
         if (mouse_mode == TRANSLATE)
           goalPosition += translation;
         else if (mouse_mode == ROTATE) {
+          Eigen::RowVector3f  goalPositionCopy = goalPosition;
           goalPosition -= handle_centroids.row(moving_handle).cast<float>();
-          igl::rotate_by_quat(goalPosition.data(), rotation.data(), goalPosition.data());
+          igl::rotate_by_quat(goalPosition.data(), rotation.data(), goalPositionCopy.data());
+          goalPosition = goalPositionCopy;
           goalPosition += handle_centroids.row(moving_handle).cast<float>();
         }
       }
@@ -221,7 +224,7 @@ bool callback_mouse_move(Viewer& viewer, int mouse_x, int mouse_y)
                                        handle_centroids.row(moving_handle));
     }
     else {
-      rotation = computeRotation(viewer,
+        rotation = computeRotation(viewer,
                                  mouse_x,
                                  down_mouse_x,
                                  mouse_y,
